@@ -1408,7 +1408,7 @@
                             <span>+</span>
                         </button>
                         <div class="faq-answer">
-                            Free
+                            No, registraion is free.
                         </div>
                     </div>
                     <div class="faq-item fade-in">
@@ -1430,31 +1430,31 @@
                 <h2 class="section-title fade-in">Get in Touch</h2>
                 <div class="contact-grid">
                     <div class="contact-info fade-in">
-                        <h3 style="margin-bottom: 2rem; color: var(--primary);">Contact Information</h3>
-                        <div style="
-    display: flex;
-    justify-content: center; /* Centers the group of names */
-    align-items: flex-start;
-    margin: 50px 80px;
-">
-    <div style="text-align: center; margin-right: 150px;">
-        <p>Dr. V.R. Sonawane</p>
-        <p>HOD</p>
-        <p>📞 +917588025179</p>
-    </div>
+                        <h3 class="contact-heading">Contact Information</h3>
+                        <div class="contact-persons">
+                            <div class="person-card">
+                                <p class="person-name">Dr. V.R. Sonawane</p>
+                                <p class="person-role">Head of Dept. IT</p>
+                                <p class="person-phone"><span class="phone-icon">📞</span> <a href="tel:+917588025179">+91 75880 25179</a></p>
+                            </div>
+                            <div class="person-card">
+                                <p class="person-name">Prof. Smitha Thakare</p>
+                                <p class="person-role">Staff Coordinator</p>
+                                <p class="person-phone"><span class="phone-icon">📞</span> <a href="tel:+918411011557">+91 84110 11557</a></p>
+                            </div>
+                </div>
 
-    <div style="text-align: center;">
-        <p>Prof. Smitha Thakare</p>
-        <p>Staff Cordinator</p>
-        <p>📞 +918411011557</p>
-    </div>
-</div>
+                        <div class="student-coord">
+                            <span class="student-label">Student Coordinator :</span>
+                            <a href="mailto:pawarvaishnav267@gmail.com" class="student-email">pawarvaishnav267@gmail.com</a>
+                        </div>
 
-<div style="margin: 30px 80px; text-align: center;">
-    <p><strong>Student Coordinator :</strong> pawarvaishnav267@gmail.com</p>
-</div>
-
-                        <div class="social-links">
+                        <div class="social-links" style="display: flex;
+                                                        justify-items: center;
+                                                        align-items: center;
+                                                        flex-wrap: wrap;
+                                                        align-content: stretch;
+                                                        justify-content: center;">
                             <a href="https://www.instagram.com/pvgcoen/?igsh=MXY4djh1aHhnbTlsaw%3D%3D#" class="social-link" target="_blank">Instagram</a>
                             <a href="https://www.linkedin.com/school/pune-vidyarthi-griha-s-college-of-engineering-nashik/" class="social-link" target="_blank">LinkedIn</a>
                             <a href="https://www.pvgcoenashik.org/" class="social-link" target="_blank">Website</a>
@@ -1477,7 +1477,141 @@
                 </div>
             </div>
         </section>
+        <!-- Contact CSS -->
+        <style>
+            /* Add this inside the <style> tag */
 
+/* Redesigned Contact Info Card Styles */
+.contact-info {
+    background: var(--surface);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px 0 rgba(99,102,241,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-heading {
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-persons {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.person-card {
+    background: rgba(99,102,241,0.05);
+    border-radius: 0.75rem;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    min-width: 180px;
+    flex: 1 1 180px;
+    margin-bottom: 0.5rem;
+}
+
+.person-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.2rem;
+}
+
+.person-role {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.person-phone {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.person-phone a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.phone-icon {
+    font-size: 1.1rem;
+}
+
+.student-coord {
+    margin: 1rem 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+}
+
+.student-label {
+    font-weight: 700;
+    color: var(--primary);
+    margin-right: 0.2rem;
+}
+
+.student-email {
+    color: var(--text-primary);
+    text-decoration: underline;
+    margin-left: 0.1rem;
+    word-break: break-all;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .contact-persons {
+        gap: 1.5rem;
+    }
+    .person-card {
+        min-width: 140px;
+        padding: 1rem 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info {
+        padding: 1.2rem 0.5rem;
+    }
+    .contact-persons {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: stretch;
+        margin-bottom: 1rem;
+    }
+    .person-card {
+        width: 100%;
+        min-width: unset;
+        padding: 1rem 0.5rem;
+    }
+    .student-coord {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+}
+        </style>
         <!-- Footer -->
         <footer>
             <div class="container">
