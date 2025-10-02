@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
             once: true // Only run the animation once
         });
     }
-
+    
     // Start the initial loading sequence
     startLoadingSequence();
 });

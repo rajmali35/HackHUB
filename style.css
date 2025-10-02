@@ -1203,7 +1203,7 @@ html, body {
             animation: loadProgress 4s ease-out forwards;
             box-shadow: 0 0 10px var(--primary);
         }
-
+        
         /* Status Text */
         .status-text {
             color: var(--accent);
