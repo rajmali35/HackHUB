@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: 0, 
                 opacity: 1, 
                 ease: "power3.out" 
-            }, "-=0.6")
+            }, "-=1.2")
             .to(".hero-tagline", { 
                 duration: 0.8, 
                 y: 0, 

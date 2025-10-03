@@ -123,28 +123,86 @@ html, body {
             66% { transform: translateY(5px) rotate(-1deg); }
         }
 
+        /* New styles for the combined logo in navigation */
+        .header-logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .pvgcoe-logo {
+            max-width: 250px; /* Max width for the logo in the navbar */
+            height: auto;
+            margin-bottom: 0.2rem;
+            /* Adjusted filter for the new PNG logo - likely has dark background already */
+            filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5)); /* Subtle blue glow */
+        }
+
+        /* Hero Section Logo Styling */
+        .pvgcoe-logo-hero {
+            /* Set the desired full width */
+            width: 110%; 
+            max-width: 1050px; /* Limiting absolute max size for desktop */
+            height: auto;
+            
+            /* Ensure the browser applies the width property correctly */
+            display: block; 
+            
+            /* Center the image within the centered .hero-content container */
+            margin-left: auto;
+            margin-right: auto;
+            
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.8)); /* Stronger blue glow for hero */
+            opacity: 0; /* Initial state for GSAP fade-in */
+            transform: translateY(-30px); /* Initial state for GSAP slide-down */
+        }
+        
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: clamp(3.5rem, 10vw, 7rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
+        /* Adjustments for the main H1 title in the hero section */
+        .hero-content h1 {
+            /* 1. Sizing: Smaller than before, but bigger than subtitle */
+            font-size: clamp(2.5rem, 5vw, 4rem); 
+            font-weight: 900; 
+            
+            /* 2. Spacing */
+            margin-top: 1rem; 
+            margin-bottom: 0.8rem; 
+            
+            /* 3. ORIGINAL COLOR RESTORATION: Using the site's default hack hub gradient */
             background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 25%, #f59e0b 50%, #10b981 75%, #6366f1 100%);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            
+            /* Ensuring original animation is active */
             animation: gradientShift 8s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3); 
             letter-spacing: -0.02em;
-            opacity: 0;
-            transform: translateY(50px);
         }
 
+        /* Ensure the subtitle is smaller than the H1 */
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Smaller than H1 */
+            margin-bottom: 0.5rem;
+            color: var(--primary); /* Retaining the primary color for the subtitle */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: clamp(2rem, 7vw, 3rem); /* Adjust H1 size for mobile */
+            }
+            .hero-subtitle {
+                font-size: clamp(1rem, 3.5vw, 1.4rem); /* Adjust subtitle size for mobile */
+            }
+        }
         @keyframes gradientShift {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -450,6 +508,25 @@ html, body {
             color: var(--text-primary);
         }
         
+            @media (max-width: 768px) {
+                /* ... existing styles ... */
+
+                .pvgcoe-logo {
+                    max-width: 180px; /* Smaller size on small screens */
+                }
+                .header-logo-container {
+                    align-items: center;
+                }
+                .logo {
+                    font-size: 1rem;
+                }
+                .pvgcoe-logo-hero {
+                    max-width: 90%;
+                }
+
+                /* ... rest of the media query ... */
+            }
+
         /* Sponsors Section Styles */
         .sponsors {
             background: var(--surface-light);
@@ -519,7 +596,7 @@ html, body {
         .sponsor-logo img {
             max-width: 100%;
             height: auto;
-            max-height: 100px; /* Limit height for uniform look */
+            max-height: 105px; /* Limit height for uniform look */
             filter: grayscale(0.2) brightness(1.2); /* Enhance visibility on dark background */
             transition: filter 0.3s ease;
             display: block;
@@ -536,7 +613,7 @@ html, body {
         }
 
         .logo-0xday a {
-            font-size: clamp(2rem, 5vw, 2.8rem); /* Adjust font size to make it prominent */
+            font-size: clamp(3rem, 7vw, 4rem); /* Adjust font size to make it prominent */
             font-weight: 700;
             letter-spacing: -0.05em;
         }
