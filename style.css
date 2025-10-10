@@ -527,18 +527,20 @@ html, body {
                 /* ... rest of the media query ... */
             }
 
-        /* Sponsors Section Styles */
+            /* Sponsors Section Styles */
         .sponsors {
             background: var(--surface-light);
             text-align: center;
         }
 
+        /* Subtitle under Sponsors */
         .sponsors-subtitle {
             font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 4rem;
         }
 
+        /* Tier title (e.g., Platinum Sponsors) */
         .sponsors-tier {
             font-size: 1.8rem;
             font-weight: 700;
@@ -559,16 +561,18 @@ html, body {
             background: var(--secondary);
         }
 
+        /* Sponsors grid layout */
         .sponsors-grid {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap; /* Keeps all logos in one line */
             justify-content: center;
             align-items: center;
             gap: 3rem;
             padding: 2rem 0;
             border-radius: 1rem;
         }
-        
+
+        /* Tier box styles */
         .tier-title {
             background: rgba(99, 102, 241, 0.1);
             padding: 3rem;
@@ -580,11 +584,16 @@ html, body {
             padding: 2rem;
         }
 
+        /* Sponsor logos common design */
         .sponsor-logo {
-            padding: 1rem;
-            background: var(--background);
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            width: 260px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0b0b1a;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -593,37 +602,40 @@ html, body {
             box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
         }
 
+        /* Logo image scaling */
         .sponsor-logo img {
-            max-width: 100%;
-            height: auto;
-            max-height: 105px; /* Limit height for uniform look */
-            filter: grayscale(0.2) brightness(1.2); /* Enhance visibility on dark background */
-            transition: filter 0.3s ease;
-            display: block;
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: contain;
         }
-        
+
+        /* Removed margin-top offset that was misaligning TalentBattle */
+        /* .sponsor-logo:last-child {
+            margin-top: -200px; 
+        } */
+
+        /* Hover brightness effect */
         .sponsor-logo:hover img {
             filter: grayscale(0) brightness(1.3);
         }
-        
-        /* CUSTOM 0xDAY STYLING */
+
+        /* CUSTOM 0xDAY TEXT LOGO STYLING */
         .logo-0xday {
-            /* Reset padding/size specifically for the text logo */
             padding: 1rem 2rem;
         }
 
         .logo-0xday a {
-            font-size: clamp(3rem, 7vw, 4rem); /* Adjust font size to make it prominent */
+            font-size: clamp(3rem, 7vw, 4rem);
             font-weight: 700;
             letter-spacing: -0.05em;
         }
 
         .logo-0xday .green-text {
-            color: var(--0xday-green); /* The specific green color */
+            color: var(--0xday-green);
         }
 
         .logo-0xday .white-text {
-            color: var(--text-primary); /* Use the main white text color */
+            color: var(--text-primary);
         }
 
         /* Blinking Cursor */
@@ -635,11 +647,18 @@ html, body {
             margin-left: 2px;
         }
 
+            /* Adjust specific logo (e.g., Talent Battle) slightly up */
+        .adjust-up {
+            margin-top: -15px; /* tweak value if needed */
+        }
+
+
         @keyframes logo-blink {
             50% {
                 opacity: 1;
             }
         }
+
 
 
         /* FAQ */
